@@ -3,7 +3,6 @@ package app;
 import java.nio.file.Paths;
 
 public class Main {
-
     private static final String BASE_PATH = "files/";
 
     public static void main(String[] args) {
@@ -11,7 +10,8 @@ public class Main {
         String newFileName = "myfile";
         String content = "Super information.";
         String path = BASE_PATH + newFileName + ".txt";
-        // Виклики методів маніпуляції з файлом
+
+        // Виклики методів для роботи з файлом
         getOutput(handler.createFile(path));
         getOutput(handler.writeToFile(Paths.get(path), content));
         getOutput("CONTENT: " + handler.readFromFile(path));
@@ -21,4 +21,3 @@ public class Main {
         System.out.println(output);
     }
 }
-
